@@ -7,6 +7,7 @@ type SearchParams = {
     unit_amount : number
     image: string
     id: string
+    quantity: number | 1,
     description: string | null
     features: string
 }
