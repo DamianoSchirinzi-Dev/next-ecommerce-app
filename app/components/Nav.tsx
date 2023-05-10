@@ -4,11 +4,15 @@ import { Session } from "next-auth";
 import { signIn } from "next-auth/react";
 import { signOut } from "next-auth/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Nav({ user }: Session) {
   return (
     <nav className="flex justify-between items-center py-16">
-      <h1 className="text-2xl">E-Commerce Site</h1>
+      <Link href={"/"}>
+        <h1 className="text-2xl">E-Commerce Site</h1>
+      </Link>
+      
       <ul className="flex items-center gap-12">
         {/*Check if user is not signed in */}
         {!user && (
