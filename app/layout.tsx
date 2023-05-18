@@ -18,10 +18,9 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const session = await getServerSession(authOptions);
-  console.log(session);
   return (
     <html lang="en">
-      <body className="mx-64">
+      <body className="mx-8 lg:mx-44">
         <Hydrate>
           <Nav user={session?.user} expires={session?.expires as string} />
           {children}

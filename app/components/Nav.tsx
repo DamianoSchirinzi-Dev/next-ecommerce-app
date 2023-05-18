@@ -38,6 +38,7 @@ export default function Nav({ user }: Session) {
               </motion.span>
             </AnimatePresence>
           )}
+
         </li>
 
         {/*if user is not signed in */}
