@@ -2,6 +2,7 @@
 
 import { useCartStore } from "@/store";
 import { AddCartType } from "@/types/AddCartType";
+import { motion } from "framer-motion";
 
 export default function AddCart({
   name,
@@ -13,14 +14,17 @@ export default function AddCart({
   const cartStore = useCartStore();
   return (
     <>
-      <button
+       <motion.button
+        whileTap={{ scale: 1.1 }}
+        whileHover={{ scale: 1 }}
+        initial={{ scale: 0.9}} 
         onClick={() =>
           cartStore.addProduct({ name, id, image, quantity, unit_amount })
         }
-        className="my-12 text-white py-2 px-6 font-medium rounded-md bg-teal-700"
+        className="text-white text-sm py-2 px-6 font-medium rounded-md bg-teal-700 md:text-lg"
       >
         Add to cart
-      </button>
-    </>
+      </motion.button>
+      </>
   );
 }
