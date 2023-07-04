@@ -25,6 +25,7 @@ export default function Checkout() {
             payment_intent_id: cartStore.paymentIntent,
         })
     })
+    
   }, [])
 
 
